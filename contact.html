@@ -73,22 +73,22 @@
     }
 
     .intro {
-      max-width: 560px;
+      max-width: 600px;
       margin-top: 40px;
       font-size: 12px;
       line-height: 1.9;
     }
 
     .intro-cn {
-      max-width: 560px;
+      max-width: 600px;
       margin-top: 14px;
       font-size: 12px;
       line-height: 1.9;
-      color: #6f6a63;
+      color: #6F6A63;
     }
 
     .contact-grid {
-      margin-top: 90px;
+      margin-top: 80px;
       border-top: 1px solid #A69D91;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -127,49 +127,129 @@
     }
 
     .inquiry {
-      margin-top: 90px;
-      max-width: 760px;
+      margin-top: 100px;
+    }
+
+    .inquiry-header {
+      max-width: 700px;
+      margin-bottom: 55px;
     }
 
     .inquiry h2 {
       font-family: "Bodoni Moda", serif;
-      font-size: clamp(38px, 5vw, 70px);
+      font-size: clamp(42px, 6vw, 76px);
       font-weight: 400;
-      line-height: 1.05;
-      margin-bottom: 18px;
+      line-height: 1;
+      margin-bottom: 20px;
     }
 
-    .inquiry p {
-      max-width: 560px;
+    .inquiry-header p {
+      max-width: 580px;
       font-size: 12px;
       line-height: 1.9;
     }
 
     .inquiry-cn {
       margin-top: 10px;
-      color: #6f6a63;
+      color: #6F6A63;
     }
 
-    .email-button {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 16px 24px;
-      border: 1px solid #292927;
+    form {
+      max-width: 900px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .field {
+      margin-bottom: 32px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 11px;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+
+    .cn-label {
+      color: #6F6A63;
+      letter-spacing: 0;
+      font-weight: 400;
+      margin-left: 5px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #A69D91;
+      border-radius: 0;
+      background: transparent;
       color: #292927;
-      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-size: 12px;
+      padding: 12px 0 14px;
+      outline: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #A69D91;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-bottom-color: #292927;
+    }
+
+    select {
+      appearance: none;
+      cursor: pointer;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+      line-height: 1.7;
+    }
+
+    .budget-note {
+      margin-top: -15px;
+      margin-bottom: 35px;
+      max-width: 650px;
+      color: #6F6A63;
+      font-size: 10px;
+      line-height: 1.8;
+    }
+
+    .submit-button {
+      margin-top: 10px;
+      padding: 17px 27px;
+      border: 1px solid #292927;
+      background: transparent;
+      color: #292927;
+      font-family: "Montserrat", sans-serif;
       font-size: 9px;
       font-weight: 500;
       letter-spacing: 2.5px;
+      cursor: pointer;
       transition: 0.25s ease;
     }
 
-    .email-button:hover {
+    .submit-button:hover {
       background: #292927;
       color: #F4F1EA;
     }
 
     footer {
-      margin-top: 110px;
+      margin-top: 120px;
       padding-top: 28px;
       border-top: 1px solid #A69D91;
       display: flex;
@@ -196,7 +276,6 @@
     }
 
     @media (max-width: 700px) {
-
       nav {
         padding: 24px 6%;
       }
@@ -238,11 +317,16 @@
       }
 
       .inquiry {
-        margin-top: 65px;
+        margin-top: 75px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
       }
 
       footer {
-        margin-top: 80px;
+        margin-top: 85px;
         align-items: flex-start;
         flex-direction: column;
       }
@@ -253,7 +337,6 @@
 <body>
 
   <nav>
-
     <a href="index.html" class="brand">
       <img src="logo.png" alt="Atelier Genèse">
     </a>
@@ -263,15 +346,12 @@
       <a href="about.html">ABOUT</a>
       <a href="contact.html">CONTACT</a>
     </div>
-
   </nav>
 
 
   <main class="contact">
 
-    <p class="page-label">
-      CONTACT
-    </p>
+    <p class="page-label">CONTACT</p>
 
     <h1>
       Let’s Create<br>
@@ -280,23 +360,20 @@
 
     <p class="intro">
       Have a new brand, project or visual idea in mind?
-      Atelier Genèse is open to selected collaborations in logo design,
-      brand visuals and creative direction.
+      Tell us about what you are building and how Atelier Genèse
+      can help shape its visual beginning.
     </p>
 
     <p class="intro-cn">
       如果你正在準備一個新品牌、重新整理品牌視覺，
-      或希望讓品牌更有質感與辨識度，歡迎與我們聯繫。
+      或有新的設計需求，歡迎告訴我們你的想法。
     </p>
 
 
     <section class="contact-grid">
 
       <div class="contact-item">
-
-        <p class="contact-title">
-          EMAIL
-        </p>
+        <p class="contact-title">EMAIL</p>
 
         <a
           class="contact-link"
@@ -304,15 +381,10 @@
         >
           Email Us ↗
         </a>
-
       </div>
 
-
       <div class="contact-item">
-
-        <p class="contact-title">
-          PHONE
-        </p>
+        <p class="contact-title">PHONE</p>
 
         <a
           class="contact-link"
@@ -320,7 +392,6 @@
         >
           Call Us ↗
         </a>
-
       </div>
 
     </section>
@@ -328,26 +399,240 @@
 
     <section class="inquiry">
 
-      <h2>
-        Start a Project.
-      </h2>
+      <div class="inquiry-header">
 
-      <p>
-        Tell us a little about your brand, what you need,
-        and what you hope to create.
-      </p>
+        <h2>Start a Project.</h2>
 
-      <p class="inquiry-cn">
-        可以簡單告訴我們你的品牌、需要的設計項目，
-        以及你希望品牌呈現什麼樣的感覺。
-      </p>
+        <p>
+          Share a few details about your brand and project.
+          Each project is quoted individually based on its scope,
+          requirements and timeline.
+        </p>
 
-      <a
-        class="email-button"
-        href="mailto:ateliergenese.studio@gmail.com?subject=Project%20Inquiry%20—%20Atelier%20Genèse"
+        <p class="inquiry-cn">
+          填寫以下資訊讓我們更了解你的需求。
+          每個專案將依設計範圍、需求與時程個別報價。
+        </p>
+
+      </div>
+
+
+      <form
+        action="https://formsubmit.co/ateliergenese.studio@gmail.com"
+        method="POST"
       >
-        START AN INQUIRY ↗
-      </a>
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Project Inquiry — Atelier Genèse"
+        >
+
+        <input
+          type="hidden"
+          name="_template"
+          value="table"
+        >
+
+        <input
+          type="text"
+          name="_honey"
+          style="display:none"
+        >
+
+
+        <div class="form-row">
+
+          <div class="field">
+            <label>
+              BRAND / COMPANY
+              <span class="cn-label">品牌／公司名稱</span>
+            </label>
+
+            <input
+              type="text"
+              name="Brand or Company"
+              placeholder="Your brand or company"
+            >
+          </div>
+
+
+          <div class="field">
+            <label>
+              NAME
+              <span class="cn-label">姓名 *</span>
+            </label>
+
+            <input
+              type="text"
+              name="Name"
+              placeholder="Your name"
+              required
+            >
+          </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+          <div class="field">
+            <label>
+              EMAIL
+              <span class="cn-label">電子郵件 *</span>
+            </label>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="name@example.com"
+              required
+            >
+          </div>
+
+
+          <div class="field">
+            <label>
+              PHONE
+              <span class="cn-label">電話</span>
+            </label>
+
+            <input
+              type="tel"
+              name="Phone"
+              placeholder="+886..."
+            >
+          </div>
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            SERVICE
+            <span class="cn-label">需要的設計項目 *</span>
+          </label>
+
+          <select name="Service" required>
+
+            <option value="" disabled selected>
+              Select a service
+            </option>
+
+            <option value="Logo Design">
+              Logo Design — Logo 設計
+            </option>
+
+            <option value="Brand Visual">
+              Brand Visual — 品牌視覺
+            </option>
+
+            <option value="Packaging Design">
+              Packaging Design — 包裝設計
+            </option>
+
+            <option value="Poster / DM">
+              Poster / DM — 海報／DM
+            </option>
+
+            <option value="Social Visual">
+              Social Visual — 社群視覺
+            </option>
+
+            <option value="Other">
+              Other — 其他
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            ESTIMATED BUDGET
+            <span class="cn-label">預算範圍</span>
+          </label>
+
+          <select name="Estimated Budget">
+
+            <option value="" disabled selected>
+              Select your estimated budget
+            </option>
+
+            <option value="Under NT$5,000">
+              Under NT$5,000
+            </option>
+
+            <option value="NT$5,000–10,000">
+              NT$5,000–10,000
+            </option>
+
+            <option value="NT$10,000–30,000">
+              NT$10,000–30,000
+            </option>
+
+            <option value="NT$30,000+">
+              NT$30,000+
+            </option>
+
+            <option value="Not sure yet">
+              Not sure yet — 尚未確定
+            </option>
+
+          </select>
+
+        </div>
+
+        <p class="budget-note">
+          The budget is only used to understand the scope of your project.
+          Final pricing will be discussed after reviewing your requirements.
+          ／ 預算僅用於了解專案規模，最終報價將依實際需求確認。
+        </p>
+
+
+        <div class="field">
+
+          <label>
+            TIMELINE
+            <span class="cn-label">希望完成時間</span>
+          </label>
+
+          <input
+            type="text"
+            name="Timeline"
+            placeholder="e.g. October 2026 / No fixed deadline"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            PROJECT DETAILS
+            <span class="cn-label">專案需求 *</span>
+          </label>
+
+          <textarea
+            name="Project Details"
+            placeholder="Tell us about your brand, what you need, and what you hope to create..."
+            required
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="submit-button"
+        >
+          SEND INQUIRY ↗
+        </button>
+
+      </form>
 
     </section>
 
