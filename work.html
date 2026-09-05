@@ -72,6 +72,14 @@
       letter-spacing: -3px;
     }
 
+    .desktop-title {
+      display: block;
+    }
+
+    .mobile-title {
+      display: none;
+    }
+
     .intro {
       max-width: 470px;
       margin-top: 40px;
@@ -161,9 +169,23 @@
         padding: 12% 7%;
       }
 
+      .desktop-title {
+        display: none;
+      }
+
+      .mobile-title {
+        display: block;
+      }
+
       h1 {
-        font-size: 17vw;
+        font-size: 13.5vw;
         letter-spacing: -1px;
+        line-height: 0.95;
+      }
+
+      .mobile-title span {
+        display: block;
+        white-space: nowrap;
       }
 
       .projects {
@@ -217,10 +239,22 @@
       SELECTED WORK
     </p>
 
-    <h1>
+
+    <!-- DESKTOP TITLE -->
+
+    <h1 class="desktop-title">
       Projects with<br>
       a Beginning.
     </h1>
+
+
+    <!-- MOBILE TITLE -->
+
+    <h1 class="mobile-title">
+      <span>Projects with</span>
+      <span>a Beginning.</span>
+    </h1>
+
 
     <p class="intro">
       Selected identities and visual work created for brands
