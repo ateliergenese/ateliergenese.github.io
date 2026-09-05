@@ -154,11 +154,29 @@
       opacity: 0.5;
     }
 
-    /* Prevent iOS from rendering the arrow as emoji */
-    .text-arrow {
-      font-family: Arial, Helvetica, sans-serif;
-      font-style: normal;
-      font-weight: 400;
+    /* CSS DRAWN ARROW — NO EMOJI */
+
+    .arrow-up-right {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin-left: 5px;
+      position: relative;
+      border-top: 1px solid #292927;
+      border-right: 1px solid #292927;
+      transform: translateY(-1px);
+    }
+
+    .arrow-up-right::after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 1px;
+      background: #292927;
+      top: 3px;
+      right: -1px;
+      transform: rotate(-45deg);
+      transform-origin: right center;
     }
 
     footer {
@@ -337,14 +355,14 @@
         href="work.html"
         class="back-link"
       >
-        <span class="text-arrow">&#8592;</span> BACK TO WORK
+        ← BACK TO WORK
       </a>
 
       <a
         href="contact.html"
         class="contact-link"
       >
-        START A PROJECT <span class="text-arrow">&#8599;</span>
+        START A PROJECT <span class="arrow-up-right"></span>
       </a>
 
     </section>
