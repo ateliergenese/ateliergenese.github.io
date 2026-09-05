@@ -154,6 +154,13 @@
       opacity: 0.5;
     }
 
+    /* Prevent iOS from rendering the arrow as emoji */
+    .text-arrow {
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+    }
+
     footer {
       margin: 55px 8% 45px;
       display: flex;
@@ -190,12 +197,12 @@
       }
 
       .menu {
-        gap: 14px;
+        gap: 12px;
       }
 
       .menu a {
-        font-size: 8px;
-        letter-spacing: 1.5px;
+        font-size: 7.5px;
+        letter-spacing: 1.2px;
       }
 
       .hero {
@@ -251,6 +258,7 @@
     <div class="menu">
       <a href="work.html">WORK</a>
       <a href="about.html">ABOUT</a>
+      <a href="info.html">INFO</a>
       <a href="contact.html">CONTACT</a>
     </div>
 
@@ -329,14 +337,14 @@
         href="work.html"
         class="back-link"
       >
-        ← BACK TO WORK
+        <span class="text-arrow">&#8592;</span> BACK TO WORK
       </a>
 
       <a
         href="contact.html"
         class="contact-link"
       >
-        START A PROJECT ↗
+        START A PROJECT <span class="text-arrow">&#8599;</span>
       </a>
 
     </section>
