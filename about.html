@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About — Atelier Genèse</title>
+  <meta name="description" content="About Atelier Genèse, an independent creative studio focused on thoughtful brand beginnings.">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #F4F1EA;
+      color: #292927;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    nav {
+      width: 100%;
+      padding: 32px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand img {
+      width: 180px;
+      height: auto;
+      display: block;
+    }
+
+    .menu {
+      display: flex;
+      gap: 32px;
+    }
+
+    .menu a {
+      color: #292927;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+    }
+
+    .about {
+      padding: 1.5% 8% 10%;
+    }
+
+    .page-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-family: "Bodoni Moda", serif;
+      font-size: clamp(60px, 9vw, 130px);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -3px;
+    }
+
+    .intro {
+      margin-top: 55px;
+      max-width: 650px;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .intro-cn {
+      margin-top: 16px;
+      max-width: 650px;
+      color: #6F6A63;
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    .section {
+      margin-top: 110px;
+      padding-top: 35px;
+      border-top: 1px solid #A69D91;
+    }
+
+    .section-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      margin-bottom: 35px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 80px;
+    }
+
+    h2 {
+      font-family: "Bodoni Moda", serif;
+      font-size: clamp(40px, 5vw, 72px);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .text-block {
+      max-width: 600px;
+    }
+
+    .text-block p {
+      font-size: 12px;
+      line-height: 2;
+      margin-bottom: 18px;
+    }
+
+    .text-block .cn {
+      color: #6F6A63;
+    }
+
+    .services {
+      margin-top: 35px;
+      border-top: 1px solid #A69D91;
+    }
+
+    .service {
+      padding: 22px 0;
+      border-bottom: 1px solid #A69D91;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .service-name {
+      font-family: "Bodoni Moda", serif;
+      font-size: clamp(22px, 2.5vw, 34px);
+    }
+
+    .service-cn {
+      align-self: center;
+      color: #6F6A63;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    .closing {
+      margin-top: 120px;
+      padding: 70px 0;
+      border-top: 1px solid #A69D91;
+      border-bottom: 1px solid #A69D91;
+    }
+
+    .closing h2 {
+      max-width: 850px;
+    }
+
+    .closing-link {
+      display: inline-block;
+      margin-top: 40px;
+      color: #292927;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      transition: opacity 0.25s ease;
+    }
+
+    .closing-link:hover {
+      opacity: 0.5;
+    }
+
+    footer {
+      margin-top: 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    footer p,
+    footer a {
+      color: #292927;
+      text-decoration: none;
+      font-size: 8px;
+      letter-spacing: 2px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        padding: 24px 6%;
+      }
+
+      .brand img {
+        width: 145px;
+      }
+
+      .menu {
+        gap: 14px;
+      }
+
+      .menu a {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+      }
+
+      .about {
+        padding: 8% 7% 12%;
+      }
+
+      h1 {
+        font-size: 17vw;
+        letter-spacing: -1px;
+      }
+
+      .intro {
+        margin-top: 40px;
+      }
+
+      .section {
+        margin-top: 80px;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .service {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .service-cn {
+        align-self: flex-start;
+      }
+
+      .closing {
+        margin-top: 85px;
+        padding: 55px 0;
+      }
+
+      footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Atelier Genèse">
+    </a>
+
+    <div class="menu">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+
+  </nav>
+
+
+  <main class="about">
+
+    <p class="page-label">
+      ABOUT ATELIER GENÈSE
+    </p>
+
+    <h1>
+      Every Brand<br>
+      Has a Beginning.
+    </h1>
+
+    <p class="intro">
+      Atelier Genèse is an independent creative studio focused on creating
+      thoughtful visual beginnings for emerging and evolving brands.
+    </p>
+
+    <p class="intro-cn">
+      Atelier Genèse 是一間獨立創意工作室，
+      專注於為正在誕生或成長中的品牌打造清晰、精緻且值得被記住的視覺起點。
+    </p>
+
+
+    <section class="section">
+
+      <p class="section-label">
+        THE NAME
+      </p>
+
+      <div class="section-grid">
+
+        <h2>
+          Genèse means<br>
+          beginning.
+        </h2>
+
+        <div class="text-block">
+
+          <p>
+            Genèse speaks to origin, birth and the moment something begins.
+            We believe a brand identity should be more than something that looks good.
+            It should become the visual foundation from which a brand can grow.
+          </p>
+
+          <p class="cn">
+            Genèse 象徵起源、誕生與開始。
+            我們相信品牌識別不應只停留在「好看」，
+            而應成為品牌未來成長時，可以持續延伸的視覺基礎。
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <p class="section-label">
+        OUR APPROACH
+      </p>
+
+      <div class="section-grid">
+
+        <h2>
+          Thoughtful.<br>
+          Refined.<br>
+          Intentional.
+        </h2>
+
+        <div class="text-block">
+
+          <p>
+            Every project begins by understanding the brand before creating
+            the visual result. We look for clarity, character and a direction
+            that feels distinct to each client.
+          </p>
+
+          <p>
+            Rather than creating something simply to finish a project,
+            Atelier Genèse values considered design that can remain meaningful
+            as the brand develops.
+          </p>
+
+          <p class="cn">
+            每一個設計都從理解品牌開始。
+            我們重視的不只是完成作品，而是找到真正適合品牌的方向，
+            讓視覺能夠隨著品牌一起成長。
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <p class="section-label">
+        WHAT WE DO
+      </p>
+
+      <h2>
+        Selected Services.
+      </h2>
+
+      <div class="services">
+
+        <div class="service">
+          <p class="service-name">Logo Design</p>
+          <p class="service-cn">LOGO 設計</p>
+        </div>
+
+        <div class="service">
+          <p class="service-name">Brand Visual</p>
+          <p class="service-cn">品牌視覺</p>
+        </div>
+
+        <div class="service">
+          <p class="service-name">Packaging Design</p>
+          <p class="service-cn">包裝設計</p>
+        </div>
+
+        <div class="service">
+          <p class="service-name">Poster / DM</p>
+          <p class="service-cn">海報／DM</p>
+        </div>
+
+        <div class="service">
+          <p class="service-name">Social Visual</p>
+          <p class="service-cn">社群視覺</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="closing">
+
+      <h2>
+        A meaningful brand<br>
+        deserves a meaningful beginning.
+      </h2>
+
+      <a
+        href="contact.html"
+        class="closing-link"
+      >
+        START A PROJECT ↗
+      </a>
+
+    </section>
+
+
+    <footer>
+
+      <p>
+        © 2026 ATELIER GENÈSE — TAIWAN
+      </p>
+
+      <div class="footer-links">
+
+        <a href="mailto:ateliergenese.studio@gmail.com">
+          EMAIL
+        </a>
+
+        <a href="tel:+886960924379">
+          PHONE
+        </a>
+
+      </div>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>
