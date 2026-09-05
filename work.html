@@ -90,8 +90,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-    color: #292927;
-    text-decoration: none;
+      color: #292927;
+      text-decoration: none;
+      transition: opacity 0.25s ease;
     }
 
     .project-name {
@@ -101,11 +102,29 @@
     }
 
     .project-type {
+      margin-top: 10px;
       font-size: 9px;
       letter-spacing: 3px;
     }
 
+    .view-project {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      white-space: nowrap;
+      transition: transform 0.25s ease;
+    }
+
+    .project:hover {
+      opacity: 0.65;
+    }
+
+    .project:hover .view-project {
+      transform: translateX(5px);
+    }
+
     @media (max-width: 700px) {
+
       nav {
         padding: 24px 6%;
       }
@@ -138,8 +157,18 @@
 
       .project {
         align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
+        gap: 20px;
+      }
+
+      .project-type {
+        margin-top: 8px;
+        line-height: 1.6;
+      }
+
+      .view-project {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+        margin-top: 8px;
       }
     }
   </style>
@@ -148,6 +177,7 @@
 <body>
 
   <nav>
+
     <a href="index.html" class="brand">
       <img src="logo.png" alt="Atelier Genèse">
     </a>
@@ -157,11 +187,15 @@
       <a href="about.html">ABOUT</a>
       <a href="contact.html">CONTACT</a>
     </div>
+
   </nav>
+
 
   <main class="work">
 
-    <p class="page-label">SELECTED WORK</p>
+    <p class="page-label">
+      SELECTED WORK
+    </p>
 
     <h1>
       Projects with<br>
@@ -173,12 +207,26 @@
       with stories worth building.
     </p>
 
+
     <div class="projects">
 
       <a href="dian-jin-shi.html" class="project">
-  <p class="project-name">Dian Jin Shi</p>
-  <p class="project-type">LOGO DESIGN — JEWELRY</p>
-</a>
+
+        <div>
+          <p class="project-name">
+            Dian Jin Shi
+          </p>
+
+          <p class="project-type">
+            LOGO DESIGN — JEWELRY
+          </p>
+        </div>
+
+        <p class="view-project">
+          VIEW PROJECT ↗
+        </p>
+
+      </a>
 
     </div>
 
