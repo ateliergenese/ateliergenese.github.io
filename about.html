@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -25,6 +26,8 @@
       color: #292927;
       font-family: "Montserrat", sans-serif;
     }
+
+    /* NAV */
 
     nav {
       width: 100%;
@@ -52,6 +55,9 @@
       font-weight: 500;
       letter-spacing: 3px;
     }
+
+
+    /* PAGE */
 
     .about {
       padding: 1.5% 8% 10%;
@@ -86,6 +92,9 @@
       font-size: 12px;
       line-height: 2;
     }
+
+
+    /* GENERAL SECTIONS */
 
     .section {
       margin-top: 110px;
@@ -127,77 +136,74 @@
       color: #6F6A63;
     }
 
-    /* SERVICES */
 
-    .services {
-      margin-top: 40px;
+    /* SELECTED SERVICES */
+
+    .services-section {
+      margin-top: 110px;
+      padding-top: 35px;
       border-top: 1px solid #A69D91;
     }
 
-    .service-row {
+    .services-heading {
+      margin-bottom: 55px;
+    }
+
+    .services-list {
+      width: 82%;
+      margin-left: auto;
+      border-top: 1px solid rgba(166, 157, 145, 0.65);
+    }
+
+    .service-item {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-bottom: 1px solid #A69D91;
+      grid-template-columns: 70px 1fr 160px;
+      align-items: center;
+
+      min-height: 112px;
+
+      border-bottom: 1px solid rgba(166, 157, 145, 0.65);
+
+      transition:
+        padding 0.3s ease,
+        opacity 0.3s ease;
     }
 
-    .service {
-      min-height: 150px;
-      padding: 24px 28px 26px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .service:first-child {
-      border-right: 1px solid #A69D91;
-    }
-
-    .service:last-child {
-      padding-left: 28px;
+    .service-item:hover {
+      padding-left: 10px;
     }
 
     .service-number {
+      align-self: start;
+      padding-top: 28px;
+
       font-size: 8px;
       font-weight: 500;
       letter-spacing: 2px;
-      color: #6F6A63;
-    }
-
-    .service-bottom {
-      margin-top: 30px;
+      color: #A69D91;
     }
 
     .service-name {
       font-family: "Bodoni Moda", serif;
-      font-size: clamp(24px, 2.8vw, 40px);
-      line-height: 1.05;
+      font-size: clamp(28px, 3.2vw, 46px);
+      font-weight: 400;
+      line-height: 1;
     }
 
     .service-cn {
-      margin-top: 7px;
-      color: #6F6A63;
+      text-align: right;
       font-size: 9px;
-      letter-spacing: 1px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      color: #6F6A63;
     }
 
-    .single-service {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .single-service .service {
-      border-right: none;
-      padding-left: 0;
-    }
-
-    .empty-service {
-      border-left: 1px solid #A69D91;
-    }
 
     /* CLOSING */
 
     .closing {
-      margin-top: 120px;
-      padding: 70px 0;
+      margin-top: 140px;
+      padding: 75px 0;
       border-top: 1px solid #A69D91;
       border-bottom: 1px solid #A69D91;
     }
@@ -209,11 +215,14 @@
     .closing-link {
       display: inline-block;
       margin-top: 40px;
+
       color: #292927;
       text-decoration: none;
+
       font-size: 10px;
       font-weight: 500;
       letter-spacing: 2.5px;
+
       transition: opacity 0.25s ease;
     }
 
@@ -221,11 +230,16 @@
       opacity: 0.5;
     }
 
+
+    /* FOOTER */
+
     footer {
       margin-top: 55px;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       gap: 20px;
     }
 
@@ -245,6 +259,9 @@
     .footer-links a:hover {
       opacity: 0.55;
     }
+
+
+    /* MOBILE */
 
     @media (max-width: 700px) {
 
@@ -278,7 +295,8 @@
         margin-top: 40px;
       }
 
-      .section {
+      .section,
+      .services-section {
         margin-top: 80px;
       }
 
@@ -287,31 +305,46 @@
         gap: 35px;
       }
 
-      .service-row,
-      .single-service {
-        grid-template-columns: 1fr;
+
+      /* SERVICES MOBILE */
+
+      .services-heading {
+        margin-bottom: 35px;
       }
 
-      .service {
-        min-height: 125px;
-        padding: 20px 0 22px;
+      .services-list {
+        width: 100%;
+        margin-left: 0;
       }
 
-      .service:first-child {
-        border-right: none;
-        border-bottom: 1px solid #A69D91;
+      .service-item {
+        grid-template-columns: 42px 1fr;
+        min-height: 105px;
+        padding: 20px 0;
       }
 
-      .service:last-child {
+      .service-item:hover {
         padding-left: 0;
       }
 
-      .empty-service {
-        display: none;
+      .service-number {
+        padding-top: 5px;
       }
 
+      .service-name {
+        font-size: 30px;
+      }
+
+      .service-cn {
+        grid-column: 2;
+        text-align: left;
+        margin-top: 7px;
+        font-size: 8px;
+      }
+
+
       .closing {
-        margin-top: 85px;
+        margin-top: 90px;
         padding: 55px 0;
       }
 
@@ -319,13 +352,20 @@
         align-items: flex-start;
         flex-direction: column;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+
+  <!-- NAV -->
+
   <nav>
+
     <a href="index.html" class="brand">
       <img src="logo.png" alt="Atelier Genèse">
     </a>
@@ -335,12 +375,19 @@
       <a href="about.html">ABOUT</a>
       <a href="contact.html">CONTACT</a>
     </div>
+
   </nav>
+
 
 
   <main class="about">
 
-    <p class="page-label">ABOUT ATELIER GENÈSE</p>
+
+    <!-- HERO -->
+
+    <p class="page-label">
+      ABOUT ATELIER GENÈSE
+    </p>
 
     <h1>
       Every Brand<br>
@@ -358,9 +405,14 @@
     </p>
 
 
+
+    <!-- THE NAME -->
+
     <section class="section">
 
-      <p class="section-label">THE NAME</p>
+      <p class="section-label">
+        THE NAME
+      </p>
 
       <div class="section-grid">
 
@@ -390,9 +442,14 @@
     </section>
 
 
+
+    <!-- OUR APPROACH -->
+
     <section class="section">
 
-      <p class="section-label">OUR APPROACH</p>
+      <p class="section-label">
+        OUR APPROACH
+      </p>
 
       <div class="section-grid">
 
@@ -429,79 +486,119 @@
     </section>
 
 
-    <section class="section">
 
-      <p class="section-label">WHAT WE DO</p>
+    <!-- SERVICES -->
 
-      <h2>Selected Services.</h2>
+    <section class="services-section">
 
-      <div class="services">
+      <p class="section-label">
+        WHAT WE DO
+      </p>
 
-        <div class="service-row">
+      <div class="services-heading">
 
-          <div class="service">
-            <p class="service-number">01</p>
+        <h2>
+          Selected Services.
+        </h2>
 
-            <div class="service-bottom">
-              <p class="service-name">Logo Design</p>
-              <p class="service-cn">LOGO 設計</p>
-            </div>
-          </div>
-
-          <div class="service">
-            <p class="service-number">02</p>
-
-            <div class="service-bottom">
-              <p class="service-name">Brand Visual</p>
-              <p class="service-cn">品牌視覺</p>
-            </div>
-          </div>
-
-        </div>
+      </div>
 
 
-        <div class="service-row">
+      <div class="services-list">
 
-          <div class="service">
-            <p class="service-number">03</p>
 
-            <div class="service-bottom">
-              <p class="service-name">Packaging Design</p>
-              <p class="service-cn">包裝設計</p>
-            </div>
-          </div>
+        <div class="service-item">
 
-          <div class="service">
-            <p class="service-number">04</p>
+          <p class="service-number">
+            01
+          </p>
 
-            <div class="service-bottom">
-              <p class="service-name">Poster / DM</p>
-              <p class="service-cn">海報／DM</p>
-            </div>
-          </div>
+          <p class="service-name">
+            Logo Design
+          </p>
+
+          <p class="service-cn">
+            LOGO 設計
+          </p>
 
         </div>
 
 
-        <div class="service-row single-service">
+        <div class="service-item">
 
-          <div class="service">
-            <p class="service-number">05</p>
+          <p class="service-number">
+            02
+          </p>
 
-            <div class="service-bottom">
-              <p class="service-name">Social Visual</p>
-              <p class="service-cn">社群視覺</p>
-            </div>
-          </div>
+          <p class="service-name">
+            Brand Visual
+          </p>
 
-          <div class="empty-service"></div>
+          <p class="service-cn">
+            品牌視覺
+          </p>
 
         </div>
+
+
+        <div class="service-item">
+
+          <p class="service-number">
+            03
+          </p>
+
+          <p class="service-name">
+            Packaging Design
+          </p>
+
+          <p class="service-cn">
+            包裝設計
+          </p>
+
+        </div>
+
+
+        <div class="service-item">
+
+          <p class="service-number">
+            04
+          </p>
+
+          <p class="service-name">
+            Poster / DM
+          </p>
+
+          <p class="service-cn">
+            海報／DM
+          </p>
+
+        </div>
+
+
+        <div class="service-item">
+
+          <p class="service-number">
+            05
+          </p>
+
+          <p class="service-name">
+            Social Visual
+          </p>
+
+          <p class="service-cn">
+            社群視覺
+          </p>
+
+        </div>
+
 
       </div>
 
     </section>
 
+
+
+    <!-- CLOSING -->
 
     <section class="closing">
 
@@ -510,12 +607,18 @@
         deserves a meaningful beginning.
       </h2>
 
-      <a href="contact.html" class="closing-link">
+      <a
+        href="contact.html"
+        class="closing-link"
+      >
         START A PROJECT ↗
       </a>
 
     </section>
 
+
+
+    <!-- FOOTER -->
 
     <footer>
 
@@ -537,7 +640,9 @@
 
     </footer>
 
+
   </main>
+
 
 </body>
 </html>
