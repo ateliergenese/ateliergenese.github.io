@@ -6,12 +6,15 @@
 
   <title>Atelier Genèse — Creative Studio</title>
   <meta name="description" content="Atelier Genèse is an independent creative studio creating thoughtful brand identities.">
-<link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -24,6 +27,8 @@
       font-family: "Montserrat", sans-serif;
     }
 
+    /* NAV */
+
     nav {
       width: 100%;
       padding: 32px 5%;
@@ -33,15 +38,16 @@
     }
 
     .brand {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 4px;
+      display: block;
+      text-decoration: none;
     }
-.brand img {
-    width: 180px;
-    height: auto;
-    display: block;
-}
+
+    .brand img {
+      width: 180px;
+      height: auto;
+      display: block;
+    }
+
     .menu {
       display: flex;
       gap: 32px;
@@ -54,6 +60,8 @@
       font-weight: 500;
       letter-spacing: 3px;
     }
+
+    /* HERO */
 
     .hero {
       min-height: calc(100vh - 90px);
@@ -79,32 +87,41 @@
       letter-spacing: 0.5px;
     }
 
+    .description-cn {
+      margin-top: 12px;
+      max-width: 470px;
+      color: #6F6A63;
+      font-size: 10px;
+      line-height: 1.9;
+      letter-spacing: 0.3px;
+    }
+
     .label {
-      margin-top: 70px;
+      margin-top: 65px;
       font-size: 9px;
       font-weight: 500;
       letter-spacing: 4px;
     }
 
+    /* MOBILE */
+
     @media (max-width: 700px) {
+
       nav {
         padding: 24px 6%;
       }
 
-      .brand {
-        font-size: 10px;
-        letter-spacing: 2px;
+      .brand img {
+        width: 145px;
       }
-.brand img {
-    width: 145px;
-}
+
       .menu {
-        gap: 14px;
+        gap: 12px;
       }
 
       .menu a {
-        font-size: 8px;
-        letter-spacing: 1.5px;
+        font-size: 7.5px;
+        letter-spacing: 1.2px;
       }
 
       .hero {
@@ -115,22 +132,45 @@
         font-size: 17vw;
         letter-spacing: -1px;
       }
+
+      .description {
+        margin-top: 38px;
+      }
+
+      .description-cn {
+        font-size: 9px;
+      }
+
+      .label {
+        margin-top: 55px;
+      }
+
     }
+
   </style>
 </head>
+
 
 <body>
 
   <nav>
-   <div class="brand"><img src="logo.png" alt="Atelier Genèse"></div>
+
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Atelier Genèse">
+    </a>
+
     <div class="menu">
-<a href="work.html">WORK</a>
-<a href="about.html">ABOUT</a>
-<a href="contact.html">CONTACT</a>
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="info.html">INFO</a>
+      <a href="contact.html">CONTACT</a>
     </div>
+
   </nav>
 
+
   <main class="hero">
+
     <h1>
       The Beginning<br>
       of a Brand.
@@ -141,7 +181,14 @@
       for brands with a beginning worth remembering.
     </p>
 
-    <p class="label">CREATIVE STUDIO — TAIWAN</p>
+    <p class="description-cn">
+      為正在誕生與成長中的品牌，打造值得被記住的視覺起點。
+    </p>
+
+    <p class="label">
+      CREATIVE STUDIO — TAIWAN
+    </p>
+
   </main>
 
 </body>
