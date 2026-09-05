@@ -127,30 +127,35 @@
       color: #6F6A63;
     }
 
+    /* SELECTED SERVICES */
+
     .services {
       margin-top: 35px;
       border-top: 1px solid #A69D91;
     }
 
     .service {
-      padding: 22px 0;
+      padding: 24px 0;
       border-bottom: 1px solid #A69D91;
       display: flex;
-      justify-content: space-between;
-      gap: 30px;
+      flex-direction: column;
+      gap: 6px;
     }
 
     .service-name {
       font-family: "Bodoni Moda", serif;
       font-size: clamp(22px, 2.5vw, 34px);
+      line-height: 1.1;
     }
 
     .service-cn {
-      align-self: center;
       color: #6F6A63;
-      font-size: 10px;
+      font-size: 9px;
       letter-spacing: 1px;
+      line-height: 1.5;
     }
+
+    /* CLOSING */
 
     .closing {
       margin-top: 120px;
@@ -178,6 +183,8 @@
       opacity: 0.5;
     }
 
+    /* FOOTER */
+
     footer {
       margin-top: 55px;
       display: flex;
@@ -199,7 +206,14 @@
       gap: 24px;
     }
 
+    .footer-links a:hover {
+      opacity: 0.55;
+    }
+
+    /* MOBILE */
+
     @media (max-width: 700px) {
+
       nav {
         padding: 24px 6%;
       }
@@ -240,12 +254,8 @@
       }
 
       .service {
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .service-cn {
-        align-self: flex-start;
+        padding: 20px 0;
+        gap: 5px;
       }
 
       .closing {
@@ -257,6 +267,7 @@
         align-items: flex-start;
         flex-direction: column;
       }
+
     }
   </style>
 </head>
@@ -280,6 +291,8 @@
 
   <main class="about">
 
+    <!-- HERO -->
+
     <p class="page-label">
       ABOUT ATELIER GENÈSE
     </p>
@@ -299,6 +312,8 @@
       專注於為正在誕生或成長中的品牌打造清晰、精緻且值得被記住的視覺起點。
     </p>
 
+
+    <!-- THE NAME -->
 
     <section class="section">
 
@@ -333,6 +348,8 @@
 
     </section>
 
+
+    <!-- OUR APPROACH -->
 
     <section class="section">
 
@@ -375,6 +392,8 @@
     </section>
 
 
+    <!-- SERVICES -->
+
     <section class="section">
 
       <p class="section-label">
@@ -388,34 +407,56 @@
       <div class="services">
 
         <div class="service">
-          <p class="service-name">Logo Design</p>
-          <p class="service-cn">LOGO 設計</p>
+          <p class="service-name">
+            Logo Design
+          </p>
+          <p class="service-cn">
+            LOGO 設計
+          </p>
         </div>
 
         <div class="service">
-          <p class="service-name">Brand Visual</p>
-          <p class="service-cn">品牌視覺</p>
+          <p class="service-name">
+            Brand Visual
+          </p>
+          <p class="service-cn">
+            品牌視覺
+          </p>
         </div>
 
         <div class="service">
-          <p class="service-name">Packaging Design</p>
-          <p class="service-cn">包裝設計</p>
+          <p class="service-name">
+            Packaging Design
+          </p>
+          <p class="service-cn">
+            包裝設計
+          </p>
         </div>
 
         <div class="service">
-          <p class="service-name">Poster / DM</p>
-          <p class="service-cn">海報／DM</p>
+          <p class="service-name">
+            Poster / DM
+          </p>
+          <p class="service-cn">
+            海報／DM
+          </p>
         </div>
 
         <div class="service">
-          <p class="service-name">Social Visual</p>
-          <p class="service-cn">社群視覺</p>
+          <p class="service-name">
+            Social Visual
+          </p>
+          <p class="service-cn">
+            社群視覺
+          </p>
         </div>
 
       </div>
 
     </section>
 
+
+    <!-- CLOSING -->
 
     <section class="closing">
 
@@ -433,6 +474,8 @@
 
     </section>
 
+
+    <!-- FOOTER -->
 
     <footer>
 
