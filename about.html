@@ -127,32 +127,70 @@
       color: #6F6A63;
     }
 
-    /* SELECTED SERVICES */
+    /* SERVICES */
 
     .services {
-      margin-top: 35px;
+      margin-top: 40px;
       border-top: 1px solid #A69D91;
     }
 
-    .service {
-      padding: 24px 0;
+    .service-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       border-bottom: 1px solid #A69D91;
+    }
+
+    .service {
+      min-height: 150px;
+      padding: 24px 28px 26px 0;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      justify-content: space-between;
+    }
+
+    .service:first-child {
+      border-right: 1px solid #A69D91;
+    }
+
+    .service:last-child {
+      padding-left: 28px;
+    }
+
+    .service-number {
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #6F6A63;
+    }
+
+    .service-bottom {
+      margin-top: 30px;
     }
 
     .service-name {
       font-family: "Bodoni Moda", serif;
-      font-size: clamp(22px, 2.5vw, 34px);
-      line-height: 1.1;
+      font-size: clamp(24px, 2.8vw, 40px);
+      line-height: 1.05;
     }
 
     .service-cn {
+      margin-top: 7px;
       color: #6F6A63;
       font-size: 9px;
       letter-spacing: 1px;
-      line-height: 1.5;
+    }
+
+    .single-service {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .single-service .service {
+      border-right: none;
+      padding-left: 0;
+    }
+
+    .empty-service {
+      border-left: 1px solid #A69D91;
     }
 
     /* CLOSING */
@@ -183,8 +221,6 @@
       opacity: 0.5;
     }
 
-    /* FOOTER */
-
     footer {
       margin-top: 55px;
       display: flex;
@@ -209,8 +245,6 @@
     .footer-links a:hover {
       opacity: 0.55;
     }
-
-    /* MOBILE */
 
     @media (max-width: 700px) {
 
@@ -253,9 +287,27 @@
         gap: 35px;
       }
 
+      .service-row,
+      .single-service {
+        grid-template-columns: 1fr;
+      }
+
       .service {
-        padding: 20px 0;
-        gap: 5px;
+        min-height: 125px;
+        padding: 20px 0 22px;
+      }
+
+      .service:first-child {
+        border-right: none;
+        border-bottom: 1px solid #A69D91;
+      }
+
+      .service:last-child {
+        padding-left: 0;
+      }
+
+      .empty-service {
+        display: none;
       }
 
       .closing {
@@ -267,7 +319,6 @@
         align-items: flex-start;
         flex-direction: column;
       }
-
     }
   </style>
 </head>
@@ -275,7 +326,6 @@
 <body>
 
   <nav>
-
     <a href="index.html" class="brand">
       <img src="logo.png" alt="Atelier Genèse">
     </a>
@@ -285,17 +335,12 @@
       <a href="about.html">ABOUT</a>
       <a href="contact.html">CONTACT</a>
     </div>
-
   </nav>
 
 
   <main class="about">
 
-    <!-- HERO -->
-
-    <p class="page-label">
-      ABOUT ATELIER GENÈSE
-    </p>
+    <p class="page-label">ABOUT ATELIER GENÈSE</p>
 
     <h1>
       Every Brand<br>
@@ -313,13 +358,9 @@
     </p>
 
 
-    <!-- THE NAME -->
-
     <section class="section">
 
-      <p class="section-label">
-        THE NAME
-      </p>
+      <p class="section-label">THE NAME</p>
 
       <div class="section-grid">
 
@@ -349,13 +390,9 @@
     </section>
 
 
-    <!-- OUR APPROACH -->
-
     <section class="section">
 
-      <p class="section-label">
-        OUR APPROACH
-      </p>
+      <p class="section-label">OUR APPROACH</p>
 
       <div class="section-grid">
 
@@ -392,71 +429,79 @@
     </section>
 
 
-    <!-- SERVICES -->
-
     <section class="section">
 
-      <p class="section-label">
-        WHAT WE DO
-      </p>
+      <p class="section-label">WHAT WE DO</p>
 
-      <h2>
-        Selected Services.
-      </h2>
+      <h2>Selected Services.</h2>
 
       <div class="services">
 
-        <div class="service">
-          <p class="service-name">
-            Logo Design
-          </p>
-          <p class="service-cn">
-            LOGO 設計
-          </p>
+        <div class="service-row">
+
+          <div class="service">
+            <p class="service-number">01</p>
+
+            <div class="service-bottom">
+              <p class="service-name">Logo Design</p>
+              <p class="service-cn">LOGO 設計</p>
+            </div>
+          </div>
+
+          <div class="service">
+            <p class="service-number">02</p>
+
+            <div class="service-bottom">
+              <p class="service-name">Brand Visual</p>
+              <p class="service-cn">品牌視覺</p>
+            </div>
+          </div>
+
         </div>
 
-        <div class="service">
-          <p class="service-name">
-            Brand Visual
-          </p>
-          <p class="service-cn">
-            品牌視覺
-          </p>
+
+        <div class="service-row">
+
+          <div class="service">
+            <p class="service-number">03</p>
+
+            <div class="service-bottom">
+              <p class="service-name">Packaging Design</p>
+              <p class="service-cn">包裝設計</p>
+            </div>
+          </div>
+
+          <div class="service">
+            <p class="service-number">04</p>
+
+            <div class="service-bottom">
+              <p class="service-name">Poster / DM</p>
+              <p class="service-cn">海報／DM</p>
+            </div>
+          </div>
+
         </div>
 
-        <div class="service">
-          <p class="service-name">
-            Packaging Design
-          </p>
-          <p class="service-cn">
-            包裝設計
-          </p>
-        </div>
 
-        <div class="service">
-          <p class="service-name">
-            Poster / DM
-          </p>
-          <p class="service-cn">
-            海報／DM
-          </p>
-        </div>
+        <div class="service-row single-service">
 
-        <div class="service">
-          <p class="service-name">
-            Social Visual
-          </p>
-          <p class="service-cn">
-            社群視覺
-          </p>
+          <div class="service">
+            <p class="service-number">05</p>
+
+            <div class="service-bottom">
+              <p class="service-name">Social Visual</p>
+              <p class="service-cn">社群視覺</p>
+            </div>
+          </div>
+
+          <div class="empty-service"></div>
+
         </div>
 
       </div>
 
     </section>
 
-
-    <!-- CLOSING -->
 
     <section class="closing">
 
@@ -465,17 +510,12 @@
         deserves a meaningful beginning.
       </h2>
 
-      <a
-        href="contact.html"
-        class="closing-link"
-      >
+      <a href="contact.html" class="closing-link">
         START A PROJECT ↗
       </a>
 
     </section>
 
-
-    <!-- FOOTER -->
 
     <footer>
 
